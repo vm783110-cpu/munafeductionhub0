@@ -5,22 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trade With Munaf - Official</title>
 
- <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '27139064469067609');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=27139064469067609&ev=PageView&noscript=1"
-/></noscript>
-<style>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '27139064469067609');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=27139064469067609&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
 
     body{
@@ -138,7 +141,7 @@ src="https://www.facebook.com/tr?id=27139064469067609&ev=PageView&noscript=1"
       font-size:18px;
     }
 
-    /* Telegram Button - ORIGINAL STYLE */
+    /* Telegram Button */
     .tgBtn{
       width:100%;
       display:flex;
@@ -261,7 +264,7 @@ src="https://www.facebook.com/tr?id=27139064469067609&ev=PageView&noscript=1"
   <div class="card">
 
     <div class="avatarWrap">
-      <img class="avatar" src="profile.jpg" alt="Trade With Munaf" />
+      <img class="avatar" src="logo.png" alt="Trade With Munaf" />
     </div>
 
     <div class="title">
@@ -326,8 +329,7 @@ src="https://www.facebook.com/tr?id=27139064469067609&ev=PageView&noscript=1"
   </div>
 
   <script>
-    const TG_LINK = "https://t.me/+R30zNIeL6L5jZmRl";
-    // Kunal button ke liye aapka naya link set kar diya hai
+    const TG_LINK = "https://t.me/+NC5kiKgVNo40M2Nl";
     const KUNAL_LINK = "https://t.me/+jE7sEbzR23gwM2U1"; 
 
     // Main Lead track + open telegram (Original buttons ke liye)
@@ -341,7 +343,7 @@ src="https://www.facebook.com/tr?id=27139064469067609&ev=PageView&noscript=1"
       window.open(TG_LINK, "_blank");
     }
 
-    // Sirf Kunal button ke liye alag function (Aapka naya link kholega)
+    // Sirf Kunal button ke liye alag function
     function openKunalLinkWithLead(){
       try{
         if(typeof fbq === "function"){
@@ -370,7 +372,9 @@ src="https://www.facebook.com/tr?id=27139064469067609&ev=PageView&noscript=1"
 
     const interval = setInterval(() => {
       timeLeft--;
-      timerEl.textContent = timeLeft;
+      if(timerEl) {
+        timerEl.textContent = timeLeft;
+      }
 
       if(timeLeft <= 0){
         clearInterval(interval);

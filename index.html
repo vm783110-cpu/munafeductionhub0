@@ -1,60 +1,142 @@
-This site is not part of Meta.
-    </div>
-
-    <div class="timer-text">
-      Auto redirecting in <span id="timer">10</span>s...
-    </div>
-  </div>
-
-  <script>
-    const TG_LINK = "https://t.me/your_telegram_channel"; 
-    const KUNAL_LINK = "https://t.me/your_kunal_link";
-
-    function openTelegramWithLead(){
-      try{
-        if(typeof fbq === "function"){
-          fbq('track', 'Lead'); 
+font-size: 14px;
+            color: #d1e0e2;
         }
-      }catch(e){}
 
-      window.open(TG_LINK, "_blank");
-    }
-
-    function openKunalLinkWithLead(){
-      try{
-        if(typeof fbq === "function"){
-          fbq('track', 'Lead'); 
+        .feature-item i {
+            font-size: 18px;
+            width: 20px;
+            text-align: center;
+            color: #80ed99;
         }
-      }catch(e){}
 
-      window.open(KUNAL_LINK, "_blank");
-    }
+        /* Badges */
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
 
-    const joinBtn = document.getElementById("joinBtn");
-    joinBtn.addEventListener("click", function(){
-      openTelegramWithLead();
-    });
+        .badge {
+            background: #14252a;
+            border: 1px solid #223a40;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #799298;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-    const kunalAdsBtn = document.getElementById("kunalAdsBtn");
-    kunalAdsBtn.addEventListener("click", function(){
-      openKunalLinkWithLead();
-    });
+        /* Managed By Section */
+        .managed-by {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #5b7378;
+            margin-bottom: 20px;
+            padding: 0 5px;
+        }
 
-    let timeLeft = 10;
-    const timerEl = document.getElementById("timer");
+        .agency-tag {
+            background: #14252a;
+            border: 1px solid #223a40;
+            padding: 6px 12px;
+            border-radius: 8px;
+            color: #80ed99;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+        }
 
-    const interval = setInterval(() => {
-      timeLeft--;
-      if(timerEl) {
-        timerEl.textContent = timeLeft;
-      }
+        /* Disclaimer Section */
+        .disclaimer-box {
+            background: #122023;
+            border: 1px solid #1c2e32;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 10.5px;
+            color: #5b7378;
+            line-height: 1.5;
+        }
 
-      if(timeLeft <= 0){
-        clearInterval(interval);
-        openTelegramWithLead();
-      }
-    }, 1000);
-  </script>
+        .disclaimer-box strong {
+            color: #80ed99;
+        }
+    </style>
+</head>
+<body>
 
-</body>
-</html>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile-container">
+            <!-- Replace profile image URL here -->
+            <img src="https://via.placeholder.com/100" alt="Kunal Profile" class="profile-img">
+            <div class="verified-badge">
+                <i class="fa-solid fa-check"></i>
+            </div>
+        </div>
+
+        <h1 class="title">KUNAL ™</h1>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>24/7</h3>
+                <p>Updates</p>
+            </div>
+            <div class="stat-card">
+                <h3>Free</h3>
+                <p>To Join</p>
+            </div>
+            <div class="stat-card">
+                <h3>Live</h3>
+                <p>Calls</p>
+            </div>
+        </div>
+
+        <!-- Telegram Link / CTA Button -->
+        <a href="https://t.me/your_telegram_link" class="cta-btn">
+            <i class="fa-paper-plane fa-solid"></i> JOIN OUR TEAM
+        </a>
+
+        <!-- Features List -->
+        <div class="features-list">
+            <div class="feature-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>प्रतिदिन 3–4 बार कॉल</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-bullseye"></i>
+                <span>लक्ष्य 100 अंक</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-bolt"></i>
+                <span>ट्रेडिंग समय सुबह 9 बजे के बाद</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>सटीक कॉल्स कम जोखिम बेहतर मुनाफा</span>
+            </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="badges-container">
+            <div class="badge">✦ Trusted Community</div>
+            <div class="badge">✦ CA Backed</div>
+        </div>
+
+        <!-- Managed By Section -->
+        <div class="managed-by">
+            <span>@Adzonn · Stay ahead with knowledge</span>
+            <div class="agency-tag">
+                <i class="fa-solid fa-sliders"></i> SIVIADSAGENCY
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer-box">
+            <strong>DISCLAIMER:</strong> Educational platform. LEARN WITH KUNAL ™ is NOT SEBI registered.

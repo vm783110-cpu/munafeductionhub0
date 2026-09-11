@@ -1,135 +1,60 @@
-padding-top: 15px;
-margin-bottom: 15px;
-}
-.agency-btn {
-background: #102326;
-border: 1px solid #1c383c;
-color: #8da9ab;
-padding: 5px 10px;
-border-radius: 6px;
-cursor: pointer;
-font-size: 10px;
-font-weight: bold;
-display: flex;
-align-items: center;
-gap: 4px;
-}
-.disclaimer-box {
-font-size: 10px;
-color: #5c7b7e;
-line-height: 1.4;
-background: rgba(0,0,0,0.15);
-padding: 10px;
-border-radius: 8px;
-}
-.timer-text {
-font-size: 12px;
-color: #6ee7b7;
-margin-top: 10px;
-}
-</style>
-</head>
-<body>
-<div class="card-container">
-<div class="profile-img-wrapper">
-<img src="[https://via.placeholder.com/100](https://via.placeholder.com/100)" alt="Goutam" class="profile-img">
-<div class="verified-badge">✓</div>
-</div>
-<h1 class="brand-title">GOUTAM ™</h1>
-<div class="stats-grid">
-<div class="stat-box">
-<span class="val">24/7</span>
-<span class="lbl">UPDATES</span>
-</div>
-<div class="stat-box">
-<span class="val">Free</span>
-<span class="lbl">TO JOIN</span>
-</div>
-<div class="stat-box">
-<span class="val">Live</span>
-<span class="lbl">CALLS</span>
-</div>
-</div>
-<button class="cta-btn" id="joinBtn">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .54-1.43.53-.48-.01-1.4-.27-2.09-.49-.84-.28-1.51-.43-1.45-.91.03-.25.38-.51 1.07-.78 4.21-1.83 7.02-3.04 8.43-3.63 4.01-1.67 4.84-1.96 5.39-1.97.12 0 .39.03.57.18.15.12.2.29.22.41-.02.06-.01.21-.03.35z"/>
-</svg>
-JOIN OUR TEAM
-</button>
-<div class="features-list">
-<div class="feature-item">
-<div class="feature-icon">📊</div>
-<span>प्रतिदिन 3-4 बार कॉल</span>
-</div>
-<div class="feature-item">
-<div class="feature-icon">🎯</div>
-<span>लक्ष्य 100 अंक</span>
-</div>
-<div class="feature-item">
-<div class="feature-icon">⚡</div>
-<span>ट्रेडिंग समय सुबह 9 बजे के बाद</span>
-</div>
-<div class="feature-item">
-<div class="feature-icon">📈</div>
-<span>सटीक कॉल्स कम जोखिम बेहतर मुनाफा</span>
-</div>
-</div>
-<div class="tags-container">
-<span class="tag">✦ Trusted Community</span>
-<span class="tag">✦ CA Backed</span>
-</div>
-<div class="footer-links">
-<span>@Adzonn · Stay ahead with knowledge</span>
-<button class="agency-btn" id="kunalAdsBtn">
-🏢 KUNALADSAGENCY
-</button>
-</div>
-<div class="disclaimer-box">
-<strong>DISCLAIMER:</strong> Educational platform. LEARN WITH GOUTAM ™ is NOT SEBI registered. No tips or investment advice provided. Trading involves financial risk. This site is not part of Meta.
-</div>
-<div class="timer-text">
-Auto redirecting in <span id="timer">10</span>s...
-</div>
-</div>
-<script>
-const TG_LINK = "https://t.me/your_telegram_channel";
-const KUNAL_LINK = "https://t.me/your_kunal_link";
-function openTelegramWithLead(){
-try{
-if(typeof fbq === "function"){
-fbq('track', 'Lead');
-}
-}catch(e){}
-window.open(TG_LINK, "_blank");
-}
-function openKunalLinkWithLead(){
-try{
-if(typeof fbq === "function"){
-fbq('track', 'Lead');
-}
-}catch(e){}
-window.open(KUNAL_LINK, "_blank");
-}
-const joinBtn = document.getElementById("joinBtn");
-joinBtn.addEventListener("click", function(){
-openTelegramWithLead();
-});
-const kunalAdsBtn = document.getElementById("kunalAdsBtn");
-kunalAdsBtn.addEventListener("click", function(){
-openKunalLinkWithLead();
-});
-let timeLeft = 10;
-const timerEl = document.getElementById("timer");
-const interval = setInterval(() => {
-timeLeft--;
-if(timerEl) {
-timerEl.textContent = timeLeft;
-}
-if(timeLeft <= 0){
-clearInterval(interval);
-openTelegramWithLead();
-}
-}, 1000);
-</script>
+This site is not part of Meta.
+    </div>
+
+    <div class="timer-text">
+      Auto redirecting in <span id="timer">10</span>s...
+    </div>
+  </div>
+
+  <script>
+    const TG_LINK = "https://t.me/your_telegram_channel"; 
+    const KUNAL_LINK = "https://t.me/your_kunal_link";
+
+    function openTelegramWithLead(){
+      try{
+        if(typeof fbq === "function"){
+          fbq('track', 'Lead'); 
+        }
+      }catch(e){}
+
+      window.open(TG_LINK, "_blank");
+    }
+
+    function openKunalLinkWithLead(){
+      try{
+        if(typeof fbq === "function"){
+          fbq('track', 'Lead'); 
+        }
+      }catch(e){}
+
+      window.open(KUNAL_LINK, "_blank");
+    }
+
+    const joinBtn = document.getElementById("joinBtn");
+    joinBtn.addEventListener("click", function(){
+      openTelegramWithLead();
+    });
+
+    const kunalAdsBtn = document.getElementById("kunalAdsBtn");
+    kunalAdsBtn.addEventListener("click", function(){
+      openKunalLinkWithLead();
+    });
+
+    let timeLeft = 10;
+    const timerEl = document.getElementById("timer");
+
+    const interval = setInterval(() => {
+      timeLeft--;
+      if(timerEl) {
+        timerEl.textContent = timeLeft;
+      }
+
+      if(timeLeft <= 0){
+        clearInterval(interval);
+        openTelegramWithLead();
+      }
+    }, 1000);
+  </script>
+
 </body>
 </html>
